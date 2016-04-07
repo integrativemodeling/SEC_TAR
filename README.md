@@ -4,8 +4,13 @@ To model the Tat:AFF4:P-TEFb:TAR complex, we applied integrative structure deter
 
 ## Directories
 
-`data`: contains the SAXS profiles for the apo and TAR complexes
+`data`: contains the SAXS profiles of the apo and TAR complexes
 
 `TAR_ensemble`: 21 TAR conformers obtained from PDBs 1ARJ and 2KX5
 
 `foxs`: scripts to run PATCHDOCK and initial models of the SEC apo complex
+
+`scripts`: scripts used for filtering, clustering and optimization of the models
+
+`models`: represetative structures of the top scoring clusters
+
