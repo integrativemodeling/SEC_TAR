@@ -1,0 +1,12 @@
+module load imp
+
+~/SOFTW/PatchDock/buildParams.pl complex_Znloop_woloops2.pdb tar_m1.pdb
+
+cp params.txt params_orig.txt
+sed -e 's/#receptorActiveSite site1.txt/receptorActiveSite site1.txt/g' -e 's/#distanceConstraintsFile file_name/distanceConstraintsFile dist1.txt/g' params_orig.txt > params.txt
+
+#Actually run
+~/SOFTW/PatchDock/patch_dock.Linux params.txt dock_Znloop2.log
+
+python get_trans.py
+saxs_score complex_Znloop_wloops2.pdb tar_m1.pdb trans_dock.dat merged_complex_A7_A9.dat -o saxs_score.res --no_filtering_by_rg
